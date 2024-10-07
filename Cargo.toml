@@ -1,0 +1,33 @@
+[package]
+name = "led-matrix-rs-template" # feel free to change this to a better name
+version = "0.1.0"
+edition = "2021"
+description = "Template for programming the ZHAW LED-matrix with Rust"
+readme = "README.md"
+license = "MIT"
+
+[features]
+# We define our own feature flag "tui", which activates the "tui" feature of
+# the led-matrix library. This way we can use the TUI by running, for example:
+# cargo run --features tui
+tui = ["led-matrix/tui"]
+
+[dependencies]
+led-matrix = { version = "0.1.0", registry = "buenzli-dev", features = [
+  # "tui" # uncomment in case the GUI simulator doesn't work for you
+]}
+
+[target.thumbv6m-none-eabi.dependencies]
+cortex-m-rt = "0.7.3"
+panic-halt = "0.2.0"
+rp-pico = "0.9.0"
+
+# optimize build for small binary size
+[profile.release]
+codegen-units = 1
+debug = 2
+debug-assertions = false
+incremental = false
+lto = 'fat'
+opt-level = 'z'
+overflow-checks = false

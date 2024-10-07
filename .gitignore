@@ -1,0 +1,7 @@
+target/
+
+# Ideally, users would remove this.
+# Checking in the lockfile would ensure their code always compiles.
+# However, if we tracked Cargo.lock in the template, we would be pinning
+# our users to outdated dependencies.
+Cargo.lock
