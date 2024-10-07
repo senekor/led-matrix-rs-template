@@ -48,3 +48,8 @@ To run on the hardware, first connect the LED-matrix while keeping BOOTSEL press
 ```sh
 cargo run --release --target thumbv6m-none-eabi
 ```
+
+Now, have fun writing your own programs!
+If you're looking for some inspiration, there are some [examples in the repo of the library](https://github.zhaw.ch/senk/led-matrix-rs/tree/main/examples).
+
+If you have a really cool program, consider adding it to the examples upstream!
