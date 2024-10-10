@@ -60,7 +60,7 @@ fn app(matrix: &mut dyn led_matrix::LedMatrix) {
         }
 
         // run some text across the screen
-        let (billboard, length) = &convert_str(*b" REWRITE IT IN RUST ");
+        let (billboard, length) = &convert_str(*b" Hello Rustacean! ");
         for offset in 0..*length {
             matrix.draw_text_billboard_frame(billboard, offset);
             matrix.apply();
