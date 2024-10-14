@@ -41,8 +41,5 @@ runner = "elf2uf2-rs -d"
 #                                                                             #
 
 # define custom registry where our ZHAW libraries are published
-[registry]
-default = "buenzli-dev"
-
 [registries.buenzli-dev]
 index = "sparse+https://git.buenzli.dev/api/packages/senekor/cargo/"
